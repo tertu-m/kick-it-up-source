@@ -7,10 +7,10 @@
 #include <ddraw.h>
 #include <mmsystem.h>
 #include <dsound.h>
-#include "dead.h"
-#include "main.h"
+#include "Dead.h"
+#include "Main.h"
 //#include "sound.h"
-#include "dsutil.h"
+#include "DSUtil.h"
 
 extern	LPDIRECTDRAWSURFACE		DeadScreen;
 extern	LPDIRECTDRAWSURFACE		GameOver;

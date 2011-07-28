@@ -6,8 +6,8 @@
 */
 
 #include <dinput.h>
-#include "input.h"
-#include "main.h"
+#include "Input.h"
+#include "Main.h"
 
 #define	MAX_DINPUT_DEVICES	10
 int	g_cpdevFound;

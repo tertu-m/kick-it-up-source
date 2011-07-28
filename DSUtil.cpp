@@ -22,7 +22,7 @@
 #include <stdio.h>
 
 #define _HSNDOBJ_DEFINED
-#include "dsutil.h"
+#include "DSUtil.h"
 
 
 static const char c_szWAV[] = "WAV";

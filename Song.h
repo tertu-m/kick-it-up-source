@@ -9,10 +9,10 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include "ddutil.h"
+#include "DDUtil.h"
 //#include "sound.h"
-#include "dsutil.h"
-#include "main.h"
+#include "DSUtil.h"
+#include "Main.h"
 
 extern LPDIRECTDRAWSURFACE NoDISC;
 

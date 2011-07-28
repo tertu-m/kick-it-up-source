@@ -2,7 +2,7 @@
 #define __MAIN_INCLUDED__
 
 #include <ddraw.h>
-#include "media.h"
+#include "Media.h"
 #include <stdio.h>
 
 #define NORMAL		0

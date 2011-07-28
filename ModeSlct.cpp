@@ -4,9 +4,9 @@
 */
 
 #include <ddraw.h>
-#include "modeslct.h"
-#include "input.h"
-#include "main.h"
+#include "ModeSlct.h"
+#include "Input.h"
+#include "Main.h"
 
 extern	LPDIRECTDRAWSURFACE	g_pDDSBack;
 extern	LPDIRECTDRAWSURFACE	ModeEasy;

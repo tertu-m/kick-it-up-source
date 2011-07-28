@@ -17,15 +17,15 @@
 #include <time.h>
 #include <dsound.h>
 
-#include "media.h"
-#include "main.h"
-#include "input.h"
-#include "select.h"
-#include "result.h"
+#include "Media.h"
+#include "Main.h"
+#include "Input.h"
+#include "Select.h"
+#include "Result.h"
 
-#include "song.h"
+#include "Song.h"
 //#include "sound.h"
-#include "dsutil.h"
+#include "DSUtil.h"
 
 #define DISCSIZE_X	300
 #define DISCSIZE_Y	200

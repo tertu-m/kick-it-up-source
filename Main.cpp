@@ -10,7 +10,7 @@
 	2000/07/23 'Patching'
 			- Bpm changing bug fixed (bpm change was incorrected.)
 */
-#include "main.h"
+#include "Main.h"
 
 // Dshow ..
 #include "Media.h"
@@ -25,17 +25,17 @@
 #include <time.h>
 #include <io.h>
 
-#include "result.h"
-#include "config.h"
+#include "Result.h"
+#include "Config.h"
 #include "dead.h"
 #include "Double.h"
-#include "ddutil.h"
+#include "DDUtil.h"
 #include "dsutil.h"
-#include "song.h"
-#include "select.h"
+#include "Song.h"
+#include "Select.h"
 //#include "sound.h"
-#include "input.h"
-#include "resource.h"
+#include "Input.h"
+#include "Resource.h"
 
 #define VER_NUM	"0.4b"
 char	TITLE[MAX_PATH];

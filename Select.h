@@ -1,6 +1,26 @@
 #ifndef __SELECT_INCLUDED__
 #define __SELECT_INCLUDED__
 
+//enumerated HMode type. currently unused
+enum HMode {
+	HMode_None,
+	HMode_2X,
+	HMode_4X,
+	HMode_8X,
+	HMode_Vanish,
+	HMode_Mirror,
+	HMode_Random,
+	HMode_Couple,
+	HMode_Synchro,
+	HMode_Nonstep,
+	HMode_NonstopDouble, //i'm unsure if this is actually used.
+	HMode_Union,
+	HMode_SelectAll,
+	HMode_4DMix,
+	HMode_SuddenR,
+	HMode_RandomS,
+	HMode_Cancel };
+
 #define	HMODE_CANCEL	99
 #define HMODE_2X		1
 #define	HMODE_4X		2

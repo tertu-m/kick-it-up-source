@@ -4,9 +4,9 @@
 
 */
 
-#include "main.h"
-#include "config.h"
-#include "input.h"
+#include "Main.h"
+#include "Config.h"
+#include "Input.h"
 
 extern	LPDIRECTDRAWSURFACE	SmallFont;
 extern	LPDIRECTDRAWSURFACE	Background;

@@ -11,7 +11,7 @@
 //////////////////////////////////////////////////////////////////////
 
 #include <dsound.h>
-#include "SONG.h"
+#include "Song.h"
 #include <stdio.h>
 #include <io.h>
 #include <windows.h>

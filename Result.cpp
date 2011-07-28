@@ -6,10 +6,10 @@
 
 #include <ddraw.h>
 
-#include "main.h"
-#include "input.h"
+#include "Main.h"
+#include "Input.h"
 #include <stdio.h>
-#include "ddutil.h"
+#include "DDUtil.h"
 
 extern	LPDIRECTDRAWSURFACE	ResultBack;
 extern	LPDIRECTDRAWSURFACE	ResultFont;
