@@ -1,0 +1,62 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Kick It Up - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP60A2.TMP" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/Kick It Up.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Mywork\Vc98\KIU\Double.cpp"
+"D:\Mywork\Vc98\KIU\main.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP60A2.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP60A3.TMP" with contents
+[
+strmbase.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ddraw.lib dsound.lib winmm.lib uuid.lib dinput.lib dxguid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Kick It Up.pdb" /machine:I386 /out:"./Kick It Up.exe" 
+.\Release\Config.obj
+.\Release\ddutil.obj
+.\Release\Dead.obj
+.\Release\Double.obj
+.\Release\dsutil.obj
+.\Release\input.obj
+.\Release\main.obj
+.\Release\Media.obj
+.\Release\Result.obj
+.\Release\select.obj
+.\Release\SONG.obj
+.\Release\Script1.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP60A3.TMP"
+<h3>Output Window</h3>
+Compiling...
+Double.cpp
+main.cpp
+Linking...
+Creating temporary file "C:\WINDOWS\TEMP\RSP6332.TMP" with contents
+[
+/nologo /o"Release/Kick It Up.bsc" 
+.\Release\Config.sbr
+.\Release\ddutil.sbr
+.\Release\Dead.sbr
+.\Release\Double.sbr
+.\Release\dsutil.sbr
+.\Release\input.sbr
+.\Release\main.sbr
+.\Release\Media.sbr
+.\Release\Result.sbr
+.\Release\select.sbr
+.\Release\SONG.sbr]
+Creating command line "bscmake.exe @C:\WINDOWS\TEMP\RSP6332.TMP"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Kick It Up.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
