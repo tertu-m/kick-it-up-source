@@ -4,6 +4,7 @@
 #include <ddraw.h>
 #include "Media.h"
 #include <stdio.h>
+#include <stdint.h>
 
 #define NORMAL		0
 #define	PRESS		1
@@ -67,6 +68,23 @@ typedef struct
     RGBQUAD Position;	// At what bit position does the color start
 	UINT bpp;
 } RGBFORMAT;
+
+enum Judgment
+{
+	Judgment_None,
+	Judgment_Perfect,
+	Judgment_Great,
+	Judgment_Good,
+	Judgment_Bad,
+	Judgment_Miss
+};
+
+//a Bunki is what most Pump players would call a "chunk".
+struct Bunki{
+	unsigned long iBunkiTrigger;
+	double fBPM;
+	int iStartTime;
+	int iTickCount;}
 
 extern LPDIRECTDRAW g_pDD;
 extern LPDIRECTDRAWSURFACE	g_pDDSPrimary;

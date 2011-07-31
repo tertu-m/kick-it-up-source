@@ -27,7 +27,7 @@
 
 #include "Result.h"
 #include "Config.h"
-#include "dead.h"
+#include "Dead.h"
 #include "Double.h"
 #include "DDUtil.h"
 #include "dsutil.h"

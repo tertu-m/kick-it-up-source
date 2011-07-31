@@ -78,6 +78,8 @@ STEP	ReadSTF(char *Filename)
 	STP.start=(int)TempStart;
 	memcpy(&STP.step,&TempStep,sizeof(STP.step));
 	
+	fclose(F);
+	
 	return STP;
 }
 
@@ -109,7 +111,8 @@ STEP_NEW	ReadKSF(char *Filename)
 	F=fopen(Filename,"rt");
 	if(F==NULL)
 	{
-		MessageBox(NULL,Filename,"SONG",NULL);
+		//The famous SONG Double.ksf error. My guess i
+		MessageBox(NULL,strcat("Couldn't open KSF file ",Filename),"Error",NULL);
 	}
 	for(;;)
 	{
@@ -328,6 +331,7 @@ STEP_NEW	ReadKSF(char *Filename)
 	STP.start=(int)TempStart;
 	memcpy(&STP.step,&TempStep,sizeof(STP.step));
 	
+	fclose(F);	
 	return STP;
 }
 
