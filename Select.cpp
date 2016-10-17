@@ -1,4 +1,4 @@
-/*
+﻿/*
 	1999-2000 Copyright (c) mahalo, the nogada worker.. (Amigo~*). All rights reserved.
 	          Copyright (c) Hyung-seok Choi, the Graphics Designer. All rights reserved.
 
@@ -65,7 +65,7 @@ extern	char				GameMode;
 
 extern	char				Couple;
 extern	char				Double;
-// Ŀ�� ������ ��
+// ﾄｿﾇﾃ ｵ･ﾀﾌﾅﾍ ｳ｡
 
 
 //extern CWAVE				*WavePrimary;
@@ -305,7 +305,7 @@ void SelectSong(void)
 		}
 	}
 
-	if(speed==1) //�ϴ��� ������ �̿�Eմϴ�. ��EŸ�̸� ǁE����� �ٲٵ��� �սô�. 
+	if(speed==1) //일단은 변수를 이용합니다. 곧 타이머 형식으로 바꾸도록 합시다. 
 	{
 		speed=0;
 		if(toggle==0)
@@ -1138,7 +1138,7 @@ void SelectSong(void)
 		lRect.right=220;
 		lRect.bottom=23;
 
-		TransAlphaImproved(CFont, g_pDDSBack, 10, 450, lRect, ALPHA, CKey_CFont, 16);
+		TransAlphaImproved(CFont, g_pDDSBack, 10, 450, lRect, ALPHA, CKey_CFont);
 	}
 	if(Start2p==FALSE)//DisplayMessageC(320,480-20,"PRESS CENTER STEP");
 	{
@@ -1147,7 +1147,7 @@ void SelectSong(void)
 		lRect.right=220;
 		lRect.bottom=23;
 
-		TransAlphaImproved(CFont, g_pDDSBack, 410, 450, lRect, ALPHA, CKey_CFont, 16);
+		TransAlphaImproved(CFont, g_pDDSBack, 410, 450, lRect, ALPHA, CKey_CFont);
 	}
 
 	ALPHA += inc;
@@ -1184,67 +1184,67 @@ int	ScanHiddenMode1p(void)
 	{
 		IntKey1p[7]='0';
 		return HMODE_2X;
-	} // 2��� �Դϴ�.
+	} // 2ｹ霈ﾓ ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey1p,"55355755")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_4X;
-	} // 4��� �Դϴ�.
+	} // 4ｹ霈ﾓ ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey1p,"55153555")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_8X;
-	} // 8��� �Դϴ�.
+	} // 8ｹ霈ﾓ ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey1p,"55975315")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_VANISH;
-	} // ��Ͻ� �Դϴ�.
+	} // ｹ雍ﾏｽｬ ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey1p,"55159357")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_MIRROR;
-	} // �̷���E�Դϴ�.
+	} // ｹﾌｷｯｸ・ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey1p,"51535957")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_RANDOM;
-	} // ������E�Դϴ�.
+	} // ｷ｣ｴｸ・ﾀﾔｴﾏｴﾙ.
 /*	else if(strcmp(IntKey1p,"55979755")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_COUPLE;
-	} // Ŀ�ø�E�Դϴ�.
+	} // ﾄｿﾇﾃｸ・ﾀﾔｴﾏｴﾙ.
 */	else if(strcmp(IntKey1p,"55797955")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_SYNCHRO;
-	} // ��ũ�� ����Դϴ�.
+	} // ｽﾌﾅｩｷﾎ ｸ蠡ﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey1p,"79579579")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_NONSTEP;
-	} // ��ٺ�ܸ�E�Դϴ�.
+	} // ｳ晳ｺﾅﾜｸ・ﾀﾔｴﾏｴﾙ.
 /*	else if(strcmp(IntKey1p,"17159395")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_NONSTOPDOUBLE;
-	} // ��ٺ�����E�Դϴ�.*/
+	} // ｳ晳ｺﾅ魘・ﾀﾔｴﾏｴﾙ.*/
 	else if(strcmp(IntKey1p,"13573159")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_UNION;
-	} // ���Ͽ¸�E�Դϴ�.
+	} // ﾀｯｴﾏｿﾂｸ・ﾀﾔｴﾏｴﾙ.
 /*	else if(strcmp(IntKey1p,"95197537")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_SELECTALL;
-	} // ����Ʈ�� �Դϴ�. */
+	} // ｼｿｷｺﾆｮｿﾃ ﾀﾔｴﾏｴﾙ. */
 	else if(strcmp(IntKey1p,"55555555")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_CANCEL;
-	} // ĵ�� �Դϴ�.
+	} // ﾄｵｽｽ ﾀﾔｴﾏｴﾙ.
 
 	else if(strcmp(IntKey1p,"55955575")==0)
 	{
@@ -1282,67 +1282,67 @@ int	ScanHiddenMode2p(void)
 	{
 		IntKey2p[7]='0';
 		return HMODE_2X;
-	} // 2��� �Դϴ�.
+	} // 2ｹ霈ﾓ ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey2p,"55355755")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_4X;
-	} // 4��� �Դϴ�.
+	} // 4ｹ霈ﾓ ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey2p,"55153555")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_8X;
-	} // 8��� �Դϴ�.
+	} // 8ｹ霈ﾓ ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey2p,"55975315")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_VANISH;
-	} // ��Ͻ� �Դϴ�.
+	} // ｹ雍ﾏｽｬ ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey2p,"55159357")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_MIRROR;
-	} // �̷���E�Դϴ�.
+	} // ｹﾌｷｯｸ・ﾀﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey2p,"51535957")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_RANDOM;
-	} // ������E�Դϴ�.
+	} // ｷ｣ｴｸ・ﾀﾔｴﾏｴﾙ.
 /*	else if(strcmp(IntKey2p,"55979755")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_COUPLE;
-	} // Ŀ�ø�E�Դϴ�.
+	} // ﾄｿﾇﾃｸ・ﾀﾔｴﾏｴﾙ.
 */	else if(strcmp(IntKey2p,"55797955")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_SYNCHRO;
-	} // ��ũ�� ����Դϴ�.
+	} // ｽﾌﾅｩｷﾎ ｸ蠡ﾔｴﾏｴﾙ.
 	else if(strcmp(IntKey2p,"79579579")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_NONSTEP;
-	} // ��ٺ�ܸ�E�Դϴ�.
+	} // ｳ晳ｺﾅﾜｸ・ﾀﾔｴﾏｴﾙ.
 /*	else if(strcmp(IntKey2p,"17159395")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_NONSTOPDOUBLE;
-	} // ��ٺ�����E�Դϴ�.*/
+	} // ｳ晳ｺﾅ魘・ﾀﾔｴﾏｴﾙ.*/
 	else if(strcmp(IntKey2p,"13573159")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_UNION;
-	} // ���Ͽ¸�E�Դϴ�.
+	} // ﾀｯｴﾏｿﾂｸ・ﾀﾔｴﾏｴﾙ.
 /*	else if(strcmp(IntKey2p,"95197537")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_SELECTALL;
-	} // ����Ʈ�� �Դϴ�. */
+	} // ｼｿｷｺﾆｮｿﾃ ﾀﾔｴﾏｴﾙ. */
 	else if(strcmp(IntKey2p,"55555555")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_CANCEL;
-	} // ĵ�� �Դϴ�.
+	} // ﾄｵｽｽ ﾀﾔｴﾏｴﾙ.
 
 	else if(strcmp(IntKey2p,"55955575")==0)
 	{

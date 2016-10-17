@@ -142,7 +142,7 @@ void DisplayJudge(int x, int y, char s, DWORD ColorKey)
 			break;
 	}
 
-	TransAlphaImproved(ResultFont, g_pDDSBack, x, y, sRect, 150, ColorKey, 16);
+	TransAlphaImproved(ResultFont, g_pDDSBack, x, y, sRect, 150, ColorKey);
 }
 
 
@@ -161,7 +161,7 @@ void	DisplayNumber(int x, int y, char *message)
 		cRect.bottom=38;
 
 		g_pDDSBack->BltFast(x+Loop*30,y,NumberFont,&cRect,DDBLTFAST_SRCCOLORKEY);
-	}/* ¿©±â±îÁö */
+	}/* ¿©±â±ûİE*/
 }
 
 void Result(void)
@@ -224,7 +224,7 @@ void Result(void)
 			else Count+=4;
 		}
 		if(Phase>0)g_pDDSBack->BltFast(235, 115, ResultFont, &sRect, DDBLTFAST_SRCCOLORKEY);
-		else TransAlphaImproved(ResultFont, g_pDDSBack, 235,115, sRect, Count, FontColorkey, 16);
+		else TransAlphaImproved(ResultFont, g_pDDSBack, 235,115, sRect, Count, FontColorkey);
 		//if(Phase>0)Count=0;
 	}
 
@@ -244,7 +244,7 @@ void Result(void)
 			else Count+=4;
 		}
 		if(Phase>1)g_pDDSBack->BltFast(253, 166, ResultFont, &sRect, DDBLTFAST_SRCCOLORKEY);
-		else TransAlphaImproved(ResultFont, g_pDDSBack, 253,166,sRect,Count, FontColorkey, 16);
+		else TransAlphaImproved(ResultFont, g_pDDSBack, 253,166,sRect,Count, FontColorkey);
 		//if(Phase>1)Count=0;
 	}
 	
@@ -264,7 +264,7 @@ void Result(void)
 			else Count+=4;
 		}
 		if(Phase>2)g_pDDSBack->BltFast(250, 220, ResultFont, &sRect, DDBLTFAST_SRCCOLORKEY);
-		else TransAlphaImproved(ResultFont, g_pDDSBack, 250,220,sRect,Count ,FontColorkey, 16);
+		else TransAlphaImproved(ResultFont, g_pDDSBack, 250,220,sRect,Count ,FontColorkey);
 		//if(Phase>2)Count=0;
 	}
 
@@ -284,7 +284,7 @@ void Result(void)
 			else Count+=4;
 		}
 		if(Phase>3)g_pDDSBack->BltFast(275, 268, ResultFont, &sRect, DDBLTFAST_SRCCOLORKEY);
-		else TransAlphaImproved(ResultFont, g_pDDSBack, 275,268,sRect,Count ,FontColorkey, 16);
+		else TransAlphaImproved(ResultFont, g_pDDSBack, 275,268,sRect,Count ,FontColorkey);
 		//if(Phase>3)Count=0;
 	}
 
@@ -304,7 +304,7 @@ void Result(void)
 			else Count+=4;
 		}
 		if(Phase>4)g_pDDSBack->BltFast(263, 323, ResultFont, &sRect, DDBLTFAST_SRCCOLORKEY);
-		else TransAlphaImproved(ResultFont, g_pDDSBack, 263,323,sRect,Count ,FontColorkey, 16);
+		else TransAlphaImproved(ResultFont, g_pDDSBack, 263,323,sRect,Count ,FontColorkey);
 		//if(Phase>4)Count=0;
 	}
 
@@ -324,7 +324,7 @@ void Result(void)
 			else Count+=4;
 		}
 		if(Phase>5)g_pDDSBack->BltFast(190, 373, ResultFont, &sRect, DDBLTFAST_SRCCOLORKEY);
-		else TransAlphaImproved(ResultFont, g_pDDSBack, 190,373,sRect,Count ,FontColorkey, 16);
+		else TransAlphaImproved(ResultFont, g_pDDSBack, 190,373,sRect,Count ,FontColorkey);
 		//if(Phase>5)Count=0;
 	}
 

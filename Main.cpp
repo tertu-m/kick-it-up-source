@@ -1435,13 +1435,13 @@ void DisplayMessageC(int x, int y,char *message)
 	for(i=0;;i++)
 	{
 		if(message[i]==NULL)break;	
-		message[i]=toupper(message[i]);
+		char curChar=toupper(message[i]);
 		
-		if(message[i])
+		if(curChar)
 		{
 			sRect.top=0;
-			sRect.left=FONT_SIZE*(message[i]-' ');
-			sRect.right=FONT_SIZE*(message[i]-' ')+FONT_SIZE;
+			sRect.left=FONT_SIZE*(curChar-' ');
+			sRect.right=FONT_SIZE*(curChar-' ')+FONT_SIZE;
 			sRect.bottom=FONT_SIZE*2;
 		}
 
@@ -1513,19 +1513,19 @@ HRESULT	ClpBlt(int x ,int y ,LPDIRECTDRAWSURFACE ds,LPRECT srect,DWORD mode)
 				memcpy(srect,&sRect,sizeof(sRect));
 				return 0;
 			}
-			if(y<250)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-150)*2,CKey_Arr,16);
+			if(y<250)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-150)*2,CKey_Arr);
 			if(y>250)hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
 		}
 		else if(bModeSuddenR1p || bModeSuddenR2p)
 		{
 			if(y<=100)hRet = g_pDDSBack->BltFast(x,y,ds,srect,mode);
-			else if(y>100 && y<=200)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(200-y)*2,CKey_Arr,16);
+			else if(y>100 && y<=200)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(200-y)*2,CKey_Arr);
 			else if(y>200 && y<320)
 			{
 				memcpy(srect,&sRect,sizeof(sRect));
 				return 0;
 			}
-			else if(y<420)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-320)*2,CKey_Arr,16);
+			else if(y<420)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-320)*2,CKey_Arr);
 			else if(y>420)hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
 		}
 		else hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
@@ -1539,19 +1539,19 @@ HRESULT	ClpBlt(int x ,int y ,LPDIRECTDRAWSURFACE ds,LPRECT srect,DWORD mode)
 				memcpy(srect,&sRect,sizeof(sRect));
 				return 0;
 			}
-			if(y<250)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-150)*2,CKey_Arr,16);
+			if(y<250)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-150)*2,CKey_Arr);
 			if(y>250)hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
 		}
 		else if(bModeSuddenR1p)
 		{
 			if(y<=100)hRet = g_pDDSBack->BltFast(x,y,ds,srect,mode);
-			else if(y>100 && y<=200)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(200-y)*2,CKey_Arr,16);
+			else if(y>100 && y<=200)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(200-y)*2,CKey_Arr);
 			else if(y>200 && y<320)
 			{
 				memcpy(srect,&sRect,sizeof(sRect));
 				return 0;
 			}
-			else if(y<420)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-320)*2,CKey_Arr,16);
+			else if(y<420)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-320)*2,CKey_Arr);
 			else if(y>420)hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
 		}
 		else hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
@@ -1565,19 +1565,19 @@ HRESULT	ClpBlt(int x ,int y ,LPDIRECTDRAWSURFACE ds,LPRECT srect,DWORD mode)
 				memcpy(srect,&sRect,sizeof(sRect));
 				return 0;
 			}
-			if(y<250)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-150)*2,CKey_Arr,16);
+			if(y<250)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-150)*2,CKey_Arr);
 			if(y>250)hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
 		}
 		else if(bModeSuddenR2p)
 		{
 			if(y<=100)hRet = g_pDDSBack->BltFast(x,y,ds,srect,mode);
-			else if(y>100 && y<=200)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(200-y)*2,CKey_Arr,16);
+			else if(y>100 && y<=200)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(200-y)*2,CKey_Arr);
 			else if(y>200 && y<320)
 			{
 				memcpy(srect,&sRect,sizeof(sRect));
 				return 0;
 			}
-			else if(y<420)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-320)*2,CKey_Arr,16);
+			else if(y<420)TransAlphaImproved(ds,g_pDDSBack,x,y,sRect,(y-320)*2,CKey_Arr);
 			else if(y>420)hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
 		}
 		else hRet=g_pDDSBack->BltFast(x,y,ds,srect,mode);
@@ -1601,8 +1601,6 @@ void StageTitle(void)
 	if(First==0)
 	{
 		ClearMode();
-
-		GetRGBFormat(g_pDDSPrimary,&g_pixelFormat);
 		Start1p=FALSE;
 		Start2p=FALSE;
 		First++;
@@ -1704,7 +1702,7 @@ void StageTitle(void)
 	lRect.bottom=69;
 
 	g_pDDSBack->BltFast(210,450,CFont, &lRect, DDBLTFAST_SRCCOLORKEY);
-	//TransAlphaImproved(CFont, g_pDDSWork, 210, 450, lRect, 100, CKey_CFont, g_pixelFormat.bpp);
+	//TransAlphaImproved(CFont, g_pDDSWork, 210, 450, lRect, 100, CKey_CFont);
 	if(Start1p==FALSE)
 	{
 		lRect.top=0;
@@ -1713,7 +1711,7 @@ void StageTitle(void)
 		lRect.bottom=23;
 
 		//g_pDDSBack->BltFast(10,450, CFont, &lRect, DDBLTFAST_SRCCOLORKEY);
-		TransAlphaImproved(CFont, g_pDDSBack, 10, 450, lRect, ALPHA, CKey_CFont, 16);
+		TransAlphaImproved(CFont, g_pDDSBack, 10, 450, lRect, ALPHA, CKey_CFont);
 		//DisplayMessageC(0,480-20,"PRESS CENTER STEP");
 	}
 	if(Start2p==FALSE)//DisplayMessageC(320,480-20,"PRESS CENTER STEP");
@@ -1723,7 +1721,7 @@ void StageTitle(void)
 		lRect.right=220;
 		lRect.bottom=23;
 
-		TransAlphaImproved(CFont, g_pDDSBack, 410, 450, lRect, ALPHA, CKey_CFont, 16);
+		TransAlphaImproved(CFont, g_pDDSBack, 410, 450, lRect, ALPHA, CKey_CFont);
 		//g_pDDSBack->BltFast(410,450,CFont, &lRect, DDBLTFAST_SRCCOLORKEY);
 		//DisplayMessageC(0,480-20,"PRESS CENTER STEP");
 	}
@@ -4400,6 +4398,9 @@ HRESULT InitDD(void)
 			return InitFail(hWnd,hRet,"Cannot Attached surface");
 		}
 	}
+	//I think it's safe to do this here.
+	GetRGBFormat(g_pDDSPrimary, &g_pixelFormat);
+
 	return	hRet;
 }
 
@@ -4756,7 +4757,7 @@ int PASCAL WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance, LPSTR lpCmdLine,
 }
 
 HRESULT TransAlphaImproved(LPDIRECTDRAWSURFACE src, LPDIRECTDRAWSURFACE dest, 
-				   LONG lDestX, LONG lDestY, RECT srcRect, WORD ALPHA, DWORD ColorKey, WORD BPP)
+				   LONG lDestX, LONG lDestY, RECT srcRect, WORD ALPHA, DWORD ColorKey)
 {
 	int register i,j;
 	int height,width;
@@ -4810,6 +4811,8 @@ HRESULT TransAlphaImproved(LPDIRECTDRAWSURFACE src, LPDIRECTDRAWSURFACE dest,
 	PLUS64         = 64 | (64 << 16);
 	ALPHABY4      = (ALPHA / 4) | ((ALPHA / 4) << 16);
 	doubleColorKey = ColorKey | (ColorKey << 16);
+
+	UINT BPP = g_pixelFormat.bpp;
 
 	switch(BPP)
 	{

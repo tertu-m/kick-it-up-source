@@ -203,7 +203,7 @@ HRESULT			InitFail(HWND hWnd, HRESULT hRet, LPCTSTR szError,...);
 HRESULT			InitWin(HINSTANCE hInstance, DWORD Width, DWORD Height, int nCmdShow);
 int PASCAL		WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance, LPSTR lpCmdLine,int nCmdShow);
 HRESULT TransAlphaImproved(LPDIRECTDRAWSURFACE src, LPDIRECTDRAWSURFACE dest, 
-				   LONG lDestX, LONG lDestY, RECT srcRect, WORD ALPHA, DWORD ColorKey, WORD BPP);
+				   LONG lDestX, LONG lDestY, RECT srcRect, WORD ALPHA, DWORD ColorKey);
 BOOL GetRGBFormat ( LPDIRECTDRAWSURFACE surf, RGBFORMAT* rgb);
 
 #endif
