@@ -316,7 +316,7 @@ void DrawJudgeDB(void)
 				cRect.bottom=100;
 				if(dwState>10)g_pDDSBack->BltFast(250,320+dwState*2-dwState*2,ComboFont,&cRect, DDBLTFAST_SRCCOLORKEY);
 				else g_pDDSBack->BltFast(250,320+dwState*2,ComboFont,&cRect, DDBLTFAST_SRCCOLORKEY);
-			}/* ¿©±â±îÁö */
+			}/* ¿©±â±ûİE*/
 		}
 	}
 
@@ -373,7 +373,7 @@ void DrawArrow_DB(DWORD cur)
 
 	ReadGameInput();
 
-	// ¿ÀÅä ¹öÆ° Áö¿ø ºÎºĞ 
+	// ¿ÀÅE¹öÆ° Áö¿EºÎºĞ 
 	if(KCFG.auto1_1p==TRUE)
 	{
 		for(count=0;count<10;count++)
@@ -2096,7 +2096,7 @@ void KIU_STAGE_DOUBLE(void)
 	delta=cur-last;
 	last=cur;
 
-	DrawArrow_DB(i); //È¸»ö È­»ìÇ¥¸¦ ¸»ÇÕ´Ï´Ù.
+	DrawArrow_DB(i); //È¸»EÈ­»E¥¸¦ ¸»ÇÕ´Ï´Ù.
 
 	start-=delta;
 
@@ -2136,7 +2136,7 @@ void KIU_STAGE_DOUBLE(void)
 			else delta=(DWORD)curtime;
 		}
 
-		//1000 Tick´ç 180/60 -> 1ÃÊ¿¡ 64*(180/60)  Áï 1 tick ´ç 64*(bpm/60)/1000
+		//1000 Tick´E180/60 -> 1ÃÊ¿¡ 64*(180/60)  ÁE1 tick ´E64*(bpm/60)/1000
 		temp-=(int)(delta*bpmpix);
 		tail+=(double)((double)(delta*bpmpix)-(int)(delta*bpmpix));
 

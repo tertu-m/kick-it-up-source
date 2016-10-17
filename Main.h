@@ -159,7 +159,7 @@ extern	double			Data_y1[MAX_DATA+1];
 
 extern char				Data_Double[MAX_DATA+1][14];
 extern char				Data_Double_Judge[MAX_DATA+1][14];
-extern double			Data_Double_y[MAX_DATA+1];//족보 데이터의 Y값을 가지고 있는 배열
+extern double			Data_Double_y[MAX_DATA+1];//족보 데이터의 Y값을 가지컖E있는 배열
 
 extern	char				ArrowState1p[10];
 extern	char				ArrowState2p[10];

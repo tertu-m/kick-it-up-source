@@ -305,7 +305,7 @@ void SelectSong(void)
 		}
 	}
 
-	if(speed==1) //ÀÏ´ÜÀº º¯¼ö¸¦ ÀÌ¿ëÇÕ´Ï´Ù. °ğ Å¸ÀÌ¸Ó Çü½ÄÀ¸·Î ¹Ù²Ùµµ·Ï ÇÕ½Ã´Ù. 
+	if(speed==1) //ÀÏ´ÜÀº º¯¼ö¸¦ ÀÌ¿EÕ´Ï´Ù. °EÅ¸ÀÌ¸Ó ÇEÄÀ¸·Î ¹Ù²Ùµµ·Ï ÇÕ½Ã´Ù. 
 	{
 		speed=0;
 		if(toggle==0)
@@ -1204,17 +1204,17 @@ int	ScanHiddenMode1p(void)
 	{
 		IntKey1p[7]='0';
 		return HMODE_MIRROR;
-	} // ¹Ì·¯¸ğµå ÀÔ´Ï´Ù.
+	} // ¹Ì·¯¸ğµEÀÔ´Ï´Ù.
 	else if(strcmp(IntKey1p,"51535957")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_RANDOM;
-	} // ·£´ı¸ğµå ÀÔ´Ï´Ù.
+	} // ·£´ı¸ğµEÀÔ´Ï´Ù.
 /*	else if(strcmp(IntKey1p,"55979755")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_COUPLE;
-	} // Ä¿ÇÃ¸ğµå ÀÔ´Ï´Ù.
+	} // Ä¿ÇÃ¸ğµEÀÔ´Ï´Ù.
 */	else if(strcmp(IntKey1p,"55797955")==0)
 	{
 		IntKey1p[7]='0';
@@ -1224,17 +1224,17 @@ int	ScanHiddenMode1p(void)
 	{
 		IntKey1p[7]='0';
 		return HMODE_NONSTEP;
-	} // ³í½ºÅÜ¸ğµå ÀÔ´Ï´Ù.
+	} // ³úÙºÅÜ¸ğµEÀÔ´Ï´Ù.
 /*	else if(strcmp(IntKey1p,"17159395")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_NONSTOPDOUBLE;
-	} // ³í½ºÅé´õºí ÀÔ´Ï´Ù.*/
+	} // ³úÙºÅé´õºEÀÔ´Ï´Ù.*/
 	else if(strcmp(IntKey1p,"13573159")==0)
 	{
 		IntKey1p[7]='0';
 		return HMODE_UNION;
-	} // À¯´Ï¿Â¸ğµå ÀÔ´Ï´Ù.
+	} // À¯´Ï¿Â¸ğµEÀÔ´Ï´Ù.
 /*	else if(strcmp(IntKey1p,"95197537")==0)
 	{
 		IntKey1p[7]='0';
@@ -1302,17 +1302,17 @@ int	ScanHiddenMode2p(void)
 	{
 		IntKey2p[7]='0';
 		return HMODE_MIRROR;
-	} // ¹Ì·¯¸ğµå ÀÔ´Ï´Ù.
+	} // ¹Ì·¯¸ğµEÀÔ´Ï´Ù.
 	else if(strcmp(IntKey2p,"51535957")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_RANDOM;
-	} // ·£´ı¸ğµå ÀÔ´Ï´Ù.
+	} // ·£´ı¸ğµEÀÔ´Ï´Ù.
 /*	else if(strcmp(IntKey2p,"55979755")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_COUPLE;
-	} // Ä¿ÇÃ¸ğµå ÀÔ´Ï´Ù.
+	} // Ä¿ÇÃ¸ğµEÀÔ´Ï´Ù.
 */	else if(strcmp(IntKey2p,"55797955")==0)
 	{
 		IntKey2p[7]='0';
@@ -1322,17 +1322,17 @@ int	ScanHiddenMode2p(void)
 	{
 		IntKey2p[7]='0';
 		return HMODE_NONSTEP;
-	} // ³í½ºÅÜ¸ğµå ÀÔ´Ï´Ù.
+	} // ³úÙºÅÜ¸ğµEÀÔ´Ï´Ù.
 /*	else if(strcmp(IntKey2p,"17159395")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_NONSTOPDOUBLE;
-	} // ³í½ºÅé´õºí ÀÔ´Ï´Ù.*/
+	} // ³úÙºÅé´õºEÀÔ´Ï´Ù.*/
 	else if(strcmp(IntKey2p,"13573159")==0)
 	{
 		IntKey2p[7]='0';
 		return HMODE_UNION;
-	} // À¯´Ï¿Â¸ğµå ÀÔ´Ï´Ù.
+	} // À¯´Ï¿Â¸ğµEÀÔ´Ï´Ù.
 /*	else if(strcmp(IntKey2p,"95197537")==0)
 	{
 		IntKey2p[7]='0';

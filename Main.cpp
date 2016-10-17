@@ -42,7 +42,7 @@ char	TITLE[MAX_PATH];
 
 #define	PRGNAME		"Kick It UP!"
 
-// ÀÏ¹İ ÇÏµå µ¥ÀÌÅÍ ºÎºĞ
+// ÀÏ¹İ ÇÏµEµ¥ÀÌÅÍ ºÎºĞ
 char				Data[MAX_DATA+1][14];
 char				Data_Judge[MAX_DATA+1][14];
 double				Data_y[MAX_DATA+1];
@@ -50,13 +50,13 @@ double				Data_y[MAX_DATA+1];
 char				Data1[MAX_DATA+1][14];
 char				Data_Judge1[MAX_DATA+1][14];
 double				Data_y1[MAX_DATA+1];
-// ¿©±â±îÁö
+// ¿©±â±ûİE
 
-// ´õºí µ¥ÀÌÅÍ ½ÃÀÛ
+// ´õºEµ¥ÀÌÅÍ ½ÃÀÛ
 char				Data_Double[MAX_DATA+1][14];
 char				Data_Double_Judge[MAX_DATA+1][14];
-double				Data_Double_y[MAX_DATA+1];//Á·º¸ µ¥ÀÌÅÍÀÇ Y°ªÀ» °¡Áö°í ÀÖ´Â ¹è¿­
-// ´õºí µ¥ÀÌÅÍ ³¡
+double				Data_Double_y[MAX_DATA+1];//Á·º¸ µ¥ÀÌÅÍÀÇ Y°ªÀ» °¡Áö°EÀÖ´Â ¹è¿­
+// ´õºEµ¥ÀÌÅÍ ³¡
 
 
 char				SongName[MAX_PATH+1];
@@ -374,7 +374,7 @@ void DrawScore1p(void)
 		cRect.top=0;
 		cRect.bottom=35;
 		g_pDDSBack->BltFast(20+Loop*22,444,Score,&cRect, DDBLTFAST_WAIT | DDBLTFAST_SRCCOLORKEY);
-	}/* ¿©±â±îÁö */
+	}/* ¿©±â±ûİE*/
 }
 
 void DrawScore2p(void)
@@ -394,7 +394,7 @@ void DrawScore2p(void)
 		cRect.top=0;
 		cRect.bottom=35;
 		g_pDDSBack->BltFast(463+Loop*22,444,Score,&cRect, DDBLTFAST_WAIT | DDBLTFAST_SRCCOLORKEY);
-	}/* ¿©±â±îÁö */
+	}/* ¿©±â±ûİE*/
 }
 
 void DrawGauge1p(void)
@@ -791,7 +791,7 @@ void KIU_STAGE(void)
 	delta=cur-last;
 	last=cur;
 
-	if(Start1p)DrawArrow1p(i); //È¸»ö È­»ìÇ¥¸¦ ¸»ÇÕ´Ï´Ù.
+	if(Start1p)DrawArrow1p(i); //È¸»EÈ­»E¥¸¦ ¸»ÇÕ´Ï´Ù.
 	if(Start2p)DrawArrow2p(i);
 
 	start-=delta;
@@ -831,7 +831,7 @@ void KIU_STAGE(void)
 			else delta=(DWORD)curtime;
 		}
 
-		//1000 Tick´ç 180/60 -> 1ÃÊ¿¡ 64*(180/60)  Áï 1 tick ´ç 64*(bpm/60)/1000
+		//1000 Tick´E180/60 -> 1ÃÊ¿¡ 64*(180/60)  ÁE1 tick ´E64*(bpm/60)/1000
 		temp-=(int)(delta*bpmpix);
 		tail+=(double)((double)(delta*bpmpix)-(int)(delta*bpmpix));
 
@@ -1463,13 +1463,13 @@ void DisplayMessage(int x, int y,char *message)
 	for(i=0;;i++)
 	{
 		if(message[i]==NULL)break;	
-		message[i]=toupper(message[i]);
+		char curChar =toupper(message[i]);
 		
-		if(message[i])
+		if(curChar)
 		{
 			sRect.top=0;
-			sRect.left=FONT_SIZE*(message[i]-' ');
-			sRect.right=FONT_SIZE*(message[i]-' ')+FONT_SIZE;
+			sRect.left=FONT_SIZE*(curChar-' ');
+			sRect.right=FONT_SIZE*(curChar-' ')+FONT_SIZE;
 			sRect.bottom=FONT_SIZE*2;
 		}
 
@@ -1872,7 +1872,7 @@ void DrawJudge1p(void)
 				
 				if(dwState>10)g_pDDSBack->BltFast(80,320+dwState*2-dwState*2,ComboFont,&cRect, DDBLTFAST_SRCCOLORKEY);
 				else g_pDDSBack->BltFast(80,320+dwState*2,ComboFont,&cRect, DDBLTFAST_SRCCOLORKEY);
-			}/* ¿©±â±îÁö */
+			}/* ¿©±â±ûİE*/
 		}
 	}
 
@@ -2008,7 +2008,7 @@ void DrawJudge2p(void)
 				
 				if(dwState2>10)g_pDDSBack->BltFast(400,320+dwState2*2-dwState2*2,ComboFont,&cRect, DDBLTFAST_SRCCOLORKEY);
 				else g_pDDSBack->BltFast(400,320+dwState2*2,ComboFont,&cRect, DDBLTFAST_SRCCOLORKEY);
-			}/* ¿©±â±îÁö */
+			}/* ¿©±â±ûİE*/
 		}
 	}
 
@@ -2055,7 +2055,7 @@ void DrawArrow1p(DWORD cur)
 	}
 
 	ReadGameInput();
-// ¿ÀÅä ¹öÆ° Áö¿ø ºÎºĞ 
+// ¿ÀÅE¹öÆ° Áö¿EºÎºĞ 
 	if(KCFG.auto1_1p==TRUE)
 	{
 		for(count=0;count<10;count++)
@@ -2844,7 +2844,7 @@ void DrawArrow2p(DWORD cur)
 		beat--;
 		if(beat<=0)beat=0;
 	}
-// ¿ÀÅä ¹öÆ° Áö¿ø ºÎºĞ 
+// ¿ÀÅE¹öÆ° Áö¿EºÎºĞ 
 	if(KCFG.auto1_2p==TRUE)
 	{
 		for(count=0;count<10;count++)
@@ -4002,7 +4002,7 @@ void UpdateFrame(void)
 
 long FAR PASCAL WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	static mou_x,mou_y;
+	static int mou_x,mou_y;
 	
 	switch (message)
     {
@@ -4030,8 +4030,8 @@ long FAR PASCAL WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam
 				case VK_F12:
 					PostMessage(hWnd, WM_CLOSE, 0, 0);
 					return 0L;
-/* SelectSong, StageTitle¿¡¼­ ÂüÁ¶ÇÕ´Ï´Ù.
-   ÃßÈÄ¿¡ ¹Ù²ãÁÖ¾î¾ß ÇÕ´Ï´Ù.
+/* SelectSong, StageTitle¿¡¼­ ÂE¶ÇÕ´Ï´Ù.
+   ÃßÈÄ¿¡ ¹Ù²ãÁÖ¾ûÚß ÇÕ´Ï´Ù.
    */
 				case VK_F2:
 					First=0;
@@ -4147,7 +4147,7 @@ long FAR PASCAL WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam
 					}
 					break;
 
-/* ¿©±â±îÁö ÀÔ´Ï´Ù. */
+/* ¿©±â±ûİEÀÔ´Ï´Ù. */
 
 				case VK_ESCAPE:
 				{
