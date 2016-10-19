@@ -37,6 +37,14 @@ void	CFGInitialize(void)
 	F=fopen("kiu.cfg","rb");
 
 	if(F==NULL)return;
+
+	fseek(F, 0, SEEK_END);
+	long size = ftell(F);
+	fseek(F, 0, SEEK_SET);
+
+	//if the config file is larger than the KIU 0.4b config, then this version can't read it.
+	//eventually there will be some other shit
+	if (size > MAX_LEGACY_SIZE) return;
 	
 	fread(&KCFG, sizeof(KCFG), 1, F);
 
@@ -44,6 +52,7 @@ void	CFGInitialize(void)
 	
 	if(KCFG.JoySet == DDR) ReadJoystickInput2 = ReadDDRInput;
 	else if(KCFG.JoySet == KOINS) ReadJoystickInput2 = ReadKoinsInput;
+	fclose(F);
 }
 
 void	CFGWrite(void)

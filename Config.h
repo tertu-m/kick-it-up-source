@@ -1,6 +1,10 @@
 #ifndef __INCLUDE_CONFIG__
 #define	__INCLUDE_CONFIG__
 
+#define MAX_LEGACY_SIZE 56U
+
+#define KIUEDIT_MAGIC "KIUEdit"
+
 #define	NORMAL		0
 #define	FUSION		1
 

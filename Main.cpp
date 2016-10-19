@@ -338,16 +338,15 @@ void ClearMode(void)
 
 void	GameOver1(void)
 {
-	static int count;
+	static DWORD startTime;
 
 	if(First==0)
 	{
-		count=0;
+		startTime = timeGetTime();
 		First++;
 	}
-	count++;
 	g_pDDSBack->BltFast(0,0, GameOver, NULL, DDBLTFAST_NOCOLORKEY);
-	if(count==60)First=0, ProgramState=GAMETITLE;
+	if((timeGetTime()-startTime)>2000)First=0, ProgramState=GAMETITLE;
 
 	Flipp();
 }
@@ -1604,7 +1603,11 @@ void StageTitle(void)
 		Start1p=FALSE;
 		Start2p=FALSE;
 		First++;
-		if(g_dsOpening)g_dsOpening->Play(0,0,0);
+		if (g_dsOpening)
+		{
+			g_dsOpening->SetCurrentPosition(0);
+			g_dsOpening->Play(0, 0, 0);
+		}
 		a=0;b=0;c=0;
 
 	}
@@ -3957,7 +3960,7 @@ void UpdateFrame(void)
 	}
 
 	sprintf(s,"FPS:%3d",fps);
-	DisplayMessage(583,463,s);
+	DisplayMessageC(583,463,s);
 	// FPS count & print end
 
 	switch(ProgramState)
@@ -4249,12 +4252,16 @@ HRESULT	InitWin(HINSTANCE hInstance, DWORD Width, DWORD Height, int nCmdShow)
 	WindowRect.top=(long)0;				// Set Top Value To 0
 	WindowRect.bottom=(long)Height;		// Set Bottom Value To Requested Height
 
+//Modern Windows doesn't like GetVersionEx, and it isn't used for anything
+//terribly important, so you can set this macro to disable the OS ver stuff.
+#ifndef WITHOUT_OSVER
 // Detect os version (for title bar)
 	OSVERSIONINFO osver;
 
 	osver.dwOSVersionInfoSize=sizeof(osver);
 	GetVersionEx(&osver);
 // Os ver detect finished.
+#endif
 
 	// Set up and register window class
     wc.style = CS_HREDRAW | CS_VREDRAW;
@@ -4284,7 +4291,11 @@ HRESULT	InitWin(HINSTANCE hInstance, DWORD Width, DWORD Height, int nCmdShow)
 
 	AdjustWindowRectEx(&WindowRect, dwStyle, FALSE, dwExStyle);		// Adjust Window To True Requested Size
 
-	sprintf(TITLE, "KICK IT UP! beta version v%s - Minor release / Compiled at %s / %s / Windows %d.%d.%d" ,VER_NUM, __DATE__, __TIME__, osver.dwMajorVersion, osver.dwMinorVersion, LOWORD(osver.dwBuildNumber));
+#ifdef WITHOUT_OSVER
+	sprintf(TITLE, "KICK IT UP! beta version v%s - Minor release / Compiled at %s / %s" ,VER_NUM, __DATE__, __TIME__ );
+#else
+	sprintf(TITLE, "KICK IT UP! beta version v%s - Minor release / Compiled at %s / %s / Windows %d.%d.%d", VER_NUM, __DATE__, __TIME__, osver.dwMajorVersion, osver.dwMinorVersion, LOWORD(osver.dwBuildNumber));
+#endif
 
     // Create a window
     hWnd = CreateWindowEx(dwExStyle ,	
@@ -4398,7 +4409,7 @@ HRESULT InitDD(void)
 			return InitFail(hWnd,hRet,"Cannot Attached surface");
 		}
 	}
-	//I think it's safe to do this here.
+	//I think it's safe to do this here. (before anything transparent is drawn)
 	GetRGBFormat(g_pDDSPrimary, &g_pixelFormat);
 
 	return	hRet;
@@ -5206,4 +5217,3 @@ BOOL GetRGBFormat ( LPDIRECTDRAWSURFACE surf, RGBFORMAT* rgb)
 
 	return TRUE;
 }
-

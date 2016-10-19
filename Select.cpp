@@ -281,7 +281,11 @@ void SelectSong(void)
 		a=Start1p;b=Start2p;
 		First++;
 
-		if(g_dsSelectSong)g_dsSelectSong->Play(0,0,DSBPLAY_LOOPING);
+		if (g_dsSelectSong)
+		{
+			g_dsSelectSong->SetCurrentPosition(0);
+			g_dsSelectSong->Play(0, 0, DSBPLAY_LOOPING);
+		}
 	}
 
 	DiscSize.top=0;
